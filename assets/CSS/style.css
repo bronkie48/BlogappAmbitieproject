@@ -1,0 +1,82 @@
+*{
+   margin: 0;
+}
+body{
+    background-color:  cadetblue;
+}
+/*general*/
+#app-name h1{
+    text-align: center;
+    margin: 44px 0 0 100px;
+}
+.register-btn{
+
+}
+.login-btn{
+
+}
+/*header*/
+header{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    background-color: cadetblue;
+    overflow:hidden;
+}
+.header-left-block{
+    border: 5px solid rgb(2, 47, 133);
+    height: 190px;
+    float: left;
+    width: calc(100% - 300px);
+}
+.header-right-block{
+    width: 300px;
+    float: right;
+    height: 190px;
+    border: 5px solid rgb(2, 47, 133);
+    border-left: 0px;
+}
+/*login-register*/
+.form-section{
+    width: 100%;
+    margin: 50px 0;
+}
+.form-grid{
+    border: 5px solid rgb(14, 163, 0);
+    display: flex;
+    height: 300px;
+    margin: auto;
+    width: 80%;
+    background-color: rgb(7, 219, 0);
+    overflow:hidden;
+}
+.register-form-grid{
+    background-color: rgb(7, 219, 0);
+}
+.login-form-grid{
+    background-color: rgb(7, 219, 0);
+}
+.login-form{
+    margin: 25px;
+}
+.register-form{
+    margin: 25px;
+}
+.button-right{
+
+}
+/*footer*/
+footer{
+
+}
+.middle-footer{
+
+}
+.footer-text {
+    
+}
+.footer-text p{
+
+}
+
+
