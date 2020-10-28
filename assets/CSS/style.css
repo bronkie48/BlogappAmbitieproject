@@ -15,6 +15,11 @@ body{
 .login-btn{
 
 }
+.detail-btn{
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+}
 /*header*/
 header{
     display: flex;
@@ -35,6 +40,66 @@ header{
     height: 190px;
     border: 5px solid rgb(2, 47, 133);
     border-left: 0px;
+}
+.menu-container{
+    margin: 80px 19px 0 55px;
+    display: block;
+}
+.menu{
+    list-style-type: none;
+    display: inline-flex;
+}
+.menu-item-red{
+    background-color: red;
+    margin: 0 50px 0px 0;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 3px 5px;
+}
+.menu-item-purple{
+    background-color: purple;
+    margin: 0 50px 0px 0;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 3px 5px;
+}
+.menu-item-green{
+    background-color: green;
+    margin: 0 50px 0px 0;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 3px 5px;
+}
+.menu-item-orange{
+    background-color: orange;
+    margin: 0;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 3px 5px;
+}
+.menu-item-red a, .menu-item-purple a, .menu-item-green a, .menu-item-orange a{
+    text-decoration: none;
+    color: cornsilk;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 2px;
+}
+.login-details{
+    display: block;
+    margin: 43 10px;
+}
+.login-details-buttons{
+    margin: 40px 10px 0px 37px;
+}
+.user-login{
+    list-style-type: none;
+}
+.user-login li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
 }
 /*login-register*/
 .form-section{
@@ -64,6 +129,44 @@ header{
 }
 .button-right{
 
+}
+/*dashboard*/
+.metro-style-blocks-grid{
+    position: absolute;
+    left: 16%;
+    text-align: center;
+    display: inline-flex;
+    margin: 0 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.metro-block-red{
+    margin: 50px;
+    min-width: 350px;
+    min-height: 300px;
+    border: 2px solid darkred;
+    background-color: red;
+}
+.metro-block-green{
+    margin: 50px;
+    min-width: 350px;
+    min-height: 300px;
+    border: 2px solid darkgreen;
+    background-color: green;
+}
+.metro-block-purple{
+    margin: 50px;
+    min-width: 350px;
+    min-height: 300px;
+    border: 2px solid darkmagenta;
+    background-color: purple;
+}
+.metro-block-orange{
+    margin: 50px;
+    min-width: 350px;
+    min-height: 300px;
+    border: 2px solid orangered;
+    background-color: orange;
 }
 /*footer*/
 footer{
