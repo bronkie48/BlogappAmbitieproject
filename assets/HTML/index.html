@@ -17,7 +17,7 @@
             <div class="form-grid">
                 <div class="register-form-grid">
                     <h1>Aanmeldformulier</h1>
-                    <form method="POST" name="register-form" id="register-form">
+                    <form action="../PHP/register.php" method="POST" name="register-form" id="register-form">
                         <div class="form-line">
                             <label for="name"><b>Voor- achternaam*</b></label>
                             <input type="text" name="name" id="name" placeholder="" required>
@@ -47,26 +47,22 @@
                             <label for="pwd-repeat"><b>Herhaal wachtwoord*</b></label>
                             <input type="password" name="pwd-repeat" id="pwd-repeat" placeholder="" required>
                         </div>
-                        <div class="form-line">
+                        <!-- <div class="form-line">
                             <div class="upload-cover">
                                 <label for="profile-img"><b>Profielfoto</b></label>
-                            <!-- <input type="file" value="Afbeelding kiezen"name="fileToUpload" id="fileToUpload"> -->
                                 <img src="/Images/Upload.jpg" id="upfile1"/>
                                 <input type="file" data-buttonText="Afbeelding uploaden" name="profile-img" id="profile-img">
                             </div>
-                        </div>
-                        <!-- <div class="form-line">
-                            <p>Heeft u al een account? <a href="#">Klik om aan te melden</a>.</p>
-                        </div>  -->
+                        </div> -->
                         <div class="button-right">
-                            <button type="submit" class="register-btn">Aanmelden</button>        
+                            <button type="submit" name="register_user" class="register-btn">Aanmelden</button>        
                         </div>
                     </form>
                 </div>
                 <div class="login-form">
                     <div class="login-form-grid">
                         <h1>Inloggen</h1>
-                        <form method="POST" name="login-form" id="login-form">
+                        <form method="POST" action="../PHP/login.php" name="login-form" id="login-form">
                             <div class="form-line">
                                 <label for="username"><b>Gebruikersnaam</b></label>
                                 <input type="text" name="username" id="username" placeholder="" required>

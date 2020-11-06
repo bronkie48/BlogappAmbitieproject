@@ -130,6 +130,9 @@ header{
 .button-right{
 
 }
+.button-left{
+
+}
 /*dashboard*/
 .metro-style-blocks-grid{
     position: absolute;
@@ -168,6 +171,44 @@ header{
     border: 2px solid orangered;
     background-color: orange;
 }
+/*blogoverzicht*/
+.metro-style-blog-overview{
+    display: flex;
+    flex-direction: row;
+}
+.filter-blog-red{
+    border: 2px solid darkred;
+    background-color: red;
+    margin: 51px 20px;
+    width: 200px;
+    height: 250px;
+}
+.filter-radio{
+
+}
+.blog-image{
+
+}
+.blog-btn{
+
+}
+/*create blog*/
+.create-blog{
+
+}
+.create-blog-button{
+    
+}
+.create-blog-form-container{
+
+}
+.create-blog-form{
+
+}
+.create-blog-form-grid{
+
+}
+
 /*footer*/
 footer{
 

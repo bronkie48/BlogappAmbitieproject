@@ -27,9 +27,38 @@
                 </div>
             </div>
         </header>
+        <section class="create-blog">
+            <div class="create-blog-button">
+                <h1>Nieuw bericht</h1>
+            </div>
+        </section>
+        <section class="create-blog-form-container">
+            <div class="create-blog-form">
+                <div class="create-blog-form-grid">
+                    <form method="POST" name="create-blog" id="create-blog">
+                        <div class="form-line">
+                            <label for="subject"><b>Onderwerp</b></label>
+                            <input type="text" name="subject" id="subject" placeholder="" required>
+                        </div>
+                        <div class="form-line">
+                            <label for="fileToUpload"><b>Afbeelding uploaden</b></label>
+                            <input type="file" name="fileToUpload" id="fileToUpload">
+                            <input type="submit" value="Upload Image" name="submit">
+                        </div>
+                        <div class="form-line">
+                            <label for="message"><b>Bericht</b></label>
+                            <input type="text" name="message" id="message" placeholder="" required>
+                        </div> 
+                        <div class="button-left">
+                            <button type="submit" class="green-btn">Posten</button> 
+                        </div>
+                        <div class="button-right">
+                            <button type="reset" class="red-btn">Annuleren</button>  
 
-        <section>
-
+                        </div>
+                    </form>    
+                </div>
+            </div>
         </section>
 
         <footer>
