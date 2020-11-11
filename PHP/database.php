@@ -22,9 +22,9 @@ $conn = mysqli_connect($servername, $username, $userpassword, $dbname);
 
 if(!$conn){
   die("Connection failed: ".mysqli_connect_error());
-   echo "Verbinding mislukt";
+   //echo "Verbinding mislukt";
 }
 else {
-   echo "Verbinding is gemaakt!";
+  // echo "Verbinding is gemaakt!";
 }
  ?>

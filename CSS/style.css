@@ -222,5 +222,18 @@ footer{
 .footer-text p{
 
 }
+.errorRegister{
+    color: red;
+    position: absolute;
+    top: 470px;
+    left: 155px;
+}
+.errorLogin{
+    color: red;
+    position: absolute;
+    top: 392px;
+    left: 637px;
+}
+
 
 

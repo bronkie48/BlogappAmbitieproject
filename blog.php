@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Blog bericht</title>
-        <link rel="stylesheet" href="../CSS/style.css">
+        <link rel="stylesheet" href="/./CSS/style.css">
     </head>
     <body>
         <header>

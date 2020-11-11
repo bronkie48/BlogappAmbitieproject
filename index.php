@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Bloggereader</title>
-        <link rel="stylesheet" href="../CSS/style.css">
+        <link rel="stylesheet" href="/Blogapp/BlogappAmbitieproject/CSS/style.css">
     </head>
     <body>
         <header>
@@ -17,23 +17,23 @@
             <div class="form-grid">
                 <div class="register-form-grid">
                     <h1>Aanmeldformulier</h1>
-                    <form action="../PHP/register.php" method="POST" name="register-form" id="register-form">
+                    <form action="/Blogapp/BlogappAmbitieproject/PHP/register.php" method="POST" name="register-form" id="register-form">
                         <div class="form-line">
                             <label for="name"><b>Voor- achternaam*</b></label>
-                            <input type="text" name="name" id="name" placeholder="" required>
+                            <input type="text" name="name" minlength="4" title="minimaal 4 karakters" id="name" placeholder="" required>
                         </div>   
                         <div class="form-line">
                             <label for="username"><b>Gebruikersnaam*</b></label>
-                            <input type="text" name="username" id="username" placeholder="" required>
+                            <input type="text" name="username" minlength="6" maxlength="16" title="6 tot 16 karakters" placeholder="" required>
                         </div>   
                         <div class="form-line">
                             <label for="email"><b>Email*</b></label>
-                            <input type="text" name="email" id="email" placeholder="" required>
+                            <input type="text" name="email" id="email" placeholder=""required>
                         </div>   
                         <div class="form-line">
                             <label for="postal"><b>Postcode & Adres*</b></label>
                             <input type="text" name="postal" id="postal" placeholder="" required>
-                            <input type="text" name="adress" id="adress" placeholder="" required>
+                            <input type="text" name="address" id="address" placeholder="" required>
                         </div>   
                         <div class="form-line">
                             <label for="city"><b>Woonplaats*</b></label>
@@ -41,11 +41,11 @@
                         </div>   
                         <div class="form-line">
                             <label for="pwd"><b>Wachtwoord*</b></label>
-                            <input type="password" name="pwd" id="pwd" placeholder="" required>
+                            <input type="password" minlength="8" maxlength="16" title="minimaal 8 karakters" name="pwd" placeholder="" required>
                         </div>   
                         <div class="form-line">
                             <label for="pwd-repeat"><b>Herhaal wachtwoord*</b></label>
-                            <input type="password" name="pwd-repeat" id="pwd-repeat" placeholder="" required>
+                            <input type="password" minlength="8" maxlength="16" title="minimaal 8 karakters" name="pwd-repeat" id="pwd-repeat" placeholder="" required>
                         </div>
                         <!-- <div class="form-line">
                             <div class="upload-cover">
@@ -62,17 +62,17 @@
                 <div class="login-form">
                     <div class="login-form-grid">
                         <h1>Inloggen</h1>
-                        <form method="POST" action="../PHP/login.php" name="login-form" id="login-form">
+                        <form method="POST" action="/Blogapp/BlogappAmbitieproject/PHP/login.php" name="login-form" id="login-form">
                             <div class="form-line">
                                 <label for="username"><b>Gebruikersnaam</b></label>
-                                <input type="text" name="username" id="username" placeholder="" required>
+                                <input type="text" name="username" id="username" placeholder="" >
                             </div>
                             <div class="form-line">
                                 <label for="pwd"><b>Wachtwoord</b></label>
-                                <input type="password" name="pwd" id="pwd" placeholder="" required>
+                                <input type="password" name="pwd" id="pwd" placeholder="" >
                             </div> 
                             <div class="button-right">
-                                <button type="submit" class="login-btn">Inloggen</button>        
+                                <button type="submit" name="login_user" class="login-btn">Inloggen</button>        
                             </div>
                         </form>    
                     </div>

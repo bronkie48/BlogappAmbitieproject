@@ -8,10 +8,10 @@
             <div class="header-left-block">
                 <div class="menu-container">
                     <ul class="menu">
-                        <li class="menu-item-red"><a href="dashboard.html">Dashboard</a></li>
-                        <li class="menu-item-purple"><a href="blogoverview.html">Blogs</a></li>
-                        <li class="menu-item-green"><a href="createblog.html">Blog maken</a></li>
-                        <li class="menu-item-orange"><a href="persondata.html">Gegevens</a></li>
+                        <li class="menu-item-red"><a href="dashboard.php">Dashboard</a></li>
+                        <li class="menu-item-purple"><a href="blogoverview.php">Blogs</a></li>
+                        <li class="menu-item-green"><a href="blogform.php">Blog maken</a></li>
+                        <li class="menu-item-orange"><a href="persondata.php">Gegevens</a></li>
                     </ul>
                 </div>
             </div>
