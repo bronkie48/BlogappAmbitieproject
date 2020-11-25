@@ -17,10 +17,10 @@ if(empty($userlogin))
             <div class="header-left-block">
                 <div class="menu-container">
                     <div class="menu">
-                        <a href="dashboard.php" class="menu-item-red">Dashboard</a>
-                        <a href="blogoverview.php" class="menu-item-purple">Blogs</a>
-                        <a href="blogform.php" class="menu-item-green">Blog maken</a>
-                        <a href="persondata.php" class="menu-item-orange">Gegevens</a>
+                        <a href="/Blogapp/BlogappAmbitieproject/dashboard.php" class="menu-item-red">Dashboard</a>
+                        <a href="/Blogapp/BlogappAmbitieproject/blogoverview.php" class="menu-item-purple">Blogs</a>
+                        <a href="/Blogapp/BlogappAmbitieproject/blogform.php" class="menu-item-green">Blog maken</a>
+                        <a href="/Blogapp/BlogappAmbitieproject/persondata.php" class="menu-item-orange">Gegevens</a>
                     </div>
                 </div>
             </div>
@@ -46,8 +46,8 @@ if(empty($userlogin))
                 <div class="create-blog-form-grid">
                     <form action="/Blogapp/BlogappAmbitieproject/PHP/createblog.php"method="POST" name="create-blog" id="create-blog">
                         <div class="form-line">
-                            <label for="subject"><b>Onderwerp</b></label>
-                            <input type="text" name="subject" id="subject" placeholder="">
+                            <label for="subject"><b>Onderwerp*</b></label>
+                            <input type="text" name="subject" id="subject" placeholder="Vul een onderwerp in">
                         </div>
                         <div class="form-line">
                             <label for="image"><b>Afbeelding uploaden</b></label>
@@ -55,8 +55,8 @@ if(empty($userlogin))
                             <input type="submit" value="Upload Image" name="upload_image">
                         </div>
                         <div class="form-line">
-                            <label for="message"><b>Bericht</b></label>
-                            <input type="text" name="message" id="message" placeholder="">
+                            <label for="message"><b>Bericht*</b></label>
+                            <textarea name="message" id="message" rows= "20" cols ="100" placeholder="Vul hier uw tekst in...."></textarea>
                         </div> 
                         <div class="button-left">
                             <button type="submit" name="create_blog" class="green-btn">Posten</button> 

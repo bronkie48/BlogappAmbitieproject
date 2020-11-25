@@ -30,17 +30,23 @@ if(isset($_POST['create_blog']))
         }
         else
         {
-            $insert = $pdo->prepare("INSERT INTO `blogbericht`(`userid`,`subject`, `message`, `image`) 
-                                     SELECT username
-                                     FROM  gebruiker 
-                                     WHERE username='$userlogin'
-                                     ");
+            $stmt = $pdo->prepare("SELECT `userid` FROM `gebruiker` WHERE `username` = '$userlogin'");
+            $stmt->execute();
+            $userid = $stmt->fetchColumn();
+
+            $insert = $pdo->prepare("INSERT INTO blogbericht(`userid`,`subject`, `message`, `image`) 
+                                     VALUES(:userid, :subject, :message, :image)");
             
+            $insert->bindValue(':userid', $userid);
             $insert->bindParam(':subject',$subject);  
-            $insert->bindParam(':message',$message);   
+            $insert->bindParam(':message',$message); 
+            $insert->bindParam(':image',$image);  
 
             $insert->execute();
-            echo "Blogbericht aangemaakt!";
+            
+            
+            header("location:/Blogapp/BlogappAmbitieproject/blogform.php");
+            echo $userlogin . " Blogbericht aangemaakt!";
         }
     } 
 }

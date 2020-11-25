@@ -57,44 +57,29 @@ if(empty($userlogin))
                     <input type = "submit" value="Reset" id="reset">
                 </form>
             </div>
+
             <div class="metro-style-blocks-grid">
+                <?php
+                    $stmt=$pdo->query("SELECT blog.userid, blog.subject, blog.message, blog.image, blog.date, user.username as username
+                                        FROM `blogbericht` as blog
+                                        INNER JOIN `gebruiker` as user
+                                        ON user.userid = blog.userid
+                                        WHERE username= '$userlogin'");
+                    while($row=$stmt->fetch())
+                    {
+                ?>
                 <div class="metro-block-purple">
-                    <h1>Titel blog</h1>
+                    <h1><?php echo $row['subject']?></h1>
                     <div class="blog-image">
-                        <img src="../IMG/blog.jpg" alt="blog">
-                        <p>Dit is een testbericht. Hier staat de omschrijving van de blog bericht</p>
-                        <p>23-9-2020</p>
+                        <img src="IMG/blog.jpg" alt="blog_afbeelding">
+                        <p><?php echo $row['message']?></p>
+                        <p><?php echo date('d/m/y H:i', strtotime( $row['date']));?></p>
                         <input type="button" class="blog-btn" value="Lees meer">
                     </div>
-                </div>
-                <div class="metro-block-purple">
-                    <h1>Titel blog</h1>
-                    <div class="blog-image">
-                        <img src="../IMG/blog.jpg" alt="blog">
-                        <p>Dit is een testbericht. Hier staat de omschrijving van de blog bericht</p>
-                        <p>23-9-2020</p>
-                        <input type="button" class="blog-btn" value="Lees meer">
-                    </div>
-                </div>
-                <div class="metro-block-purple">
-                    <h1>Titel blog</h1>
-                    <div class="blog-image">
-                        <img src="../IMG/blog.jpg" alt="blog">
-                        <p>Dit is een testbericht. Hier staat de omschrijving van de blog bericht</p>
-                        <p>23-9-2020</p>
-                        <input type="button" class="blog-btn" value="Lees meer">
-                    </div>
-                </div>
-                <div class="metro-block-purple">
-                    <h1>Titel blog</h1>
-                    <div class="blog-image">
-                        <img src="../IMG/blog.jpg" alt="blog">
-                        <p>Dit is een testbericht. Hier staat de omschrijving van de blog bericht</p>
-                        <p>23-9-2020</p>
-                        <input type="button" class="blog-btn" value="Lees meer">
-                    </div>
-                </div>
-            </div>
+                </div>    
+                <?php 
+                    }
+                ?>
         </section>
 
         <footer>
