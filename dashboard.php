@@ -2,6 +2,12 @@
 require_once "PHP/database.php";
 session_start();
 $userlogin = $_SESSION['userlogin'];
+
+//redirect when user is not logged in
+if(empty($userlogin))
+{
+    header("location:/Blogapp/BlogappAmbitieproject/index.php");
+}
 ?>
 <html>
     <head>
@@ -12,12 +18,12 @@ $userlogin = $_SESSION['userlogin'];
         <header>
             <div class="header-left-block">
                 <div class="menu-container">
-                    <ul class="menu">
-                        <li class="menu-item-red"><a href="dashboard.php">Dashboard</a></li>
-                        <li class="menu-item-purple"><a href="blogoverview.php">Blogs</a></li>
-                        <li class="menu-item-green"><a href="blogform.php">Blog maken</a></li>
-                        <li class="menu-item-orange"><a href="persondata.php">Gegevens</a></li>
-                    </ul>
+                    <div class="menu">
+                        <a href="dashboard.php" class="menu-item-red">Dashboard</a>
+                        <a href="blogoverview.php" class="menu-item-purple">Blogs</a>
+                        <a href="blogform.php" class="menu-item-green">Blog maken</a>
+                        <a href="persondata.php" class="menu-item-orange">Gegevens</a>
+                    </div>
                 </div>
             </div>
             <div class="header-right-block">
@@ -27,7 +33,7 @@ $userlogin = $_SESSION['userlogin'];
                     </ul>
                     <div class="login-details-buttons">
                         <a href="PHP/logout.php"  class="detail-btn"> Uitloggen</a>
-                        <input type= "button" class="detail-btn" value="Mijn gegevens">
+                        <a href="persondata.php"  class="detail-btn"> Mijn Gegevens</a>
                     </div>
                 </div>
             </div>
@@ -35,18 +41,18 @@ $userlogin = $_SESSION['userlogin'];
 
         <section class="metro-style-blocks">
             <div class="metro-style-blocks-grid">
-                <div class="metro-block-red">
-                    <h1>Laatste Bericht</h1>
-                </div>
-                <div class="metro-block-green">
+                <a href="blogoverview.php" class="metro-block-red">
+                    <h1>Laatste Berichten</h1>
+                </a>
+                <a href="blogform.php"class="metro-block-green"> 
                     <h1>Bericht posten</h1>
-                </div>
-                <div class="metro-block-purple">
+                </a> 
+                <a href="blogoverview.php" class="metro-block-purple">   
                     <h1>Mijn Berichten</h1>
-                </div>
-                <div class="metro-block-orange">
+                </a> 
+                <a href="persondata.php" class="metro-block-orange">   
                     <h1>Mijn Gegevens</h1>
-                </div>
+                 </a> 
             </div>
         </section>
     </body>

@@ -1,28 +1,38 @@
+<?php
+require_once "PHP/database.php";
+session_start();
+$userlogin = $_SESSION['userlogin'];
+
+if(empty($userlogin))
+{
+    header("location:/Blogapp/BlogappAmbitieproject/index.php");
+}
+?>
 <html>
-    <head>
-        <title>Blogoverzicht</title>
-        <link rel="stylesheet" href="../CSS/style.css">
+<head>
+        <title>Overzicht</title>
+        <link rel="stylesheet" href="CSS/style.css">
     </head>
     <body>
-        <header>
+    <header>
             <div class="header-left-block">
                 <div class="menu-container">
-                    <ul class="menu">
-                        <li class="menu-item-red"><a href="dashboard.php">Dashboard</a></li>
-                        <li class="menu-item-purple"><a href="blogoverview.php">Blogs</a></li>
-                        <li class="menu-item-green"><a href="blogform.php">Blog maken</a></li>
-                        <li class="menu-item-orange"><a href="persondata.php">Gegevens</a></li>
-                    </ul>
+                    <div class="menu">
+                        <a href="dashboard.php" class="menu-item-red">Dashboard</a>
+                        <a href="blogoverview.php" class="menu-item-purple">Blogs</a>
+                        <a href="blogform.php" class="menu-item-green">Blog maken</a>
+                        <a href="persondata.php" class="menu-item-orange">Gegevens</a>
+                    </div>
                 </div>
             </div>
             <div class="header-right-block">
                 <div class="login-details">
                     <ul class="user-login">
-                        <li><img src="../IMG/user.png" width="25" height="25" alt="user icon">User123</li>
+                        <li><img src="../IMG/user.png" width="25" height="25" alt="user icon"><?php echo $userlogin;?></li>
                     </ul>
                     <div class="login-details-buttons">
-                        <input type="button" class="detail-btn" value="Uitloggen">
-                        <input type="button" class="detail-btn" value="Mijn gegevens">
+                        <a href="PHP/logout.php"  class="detail-btn"> Uitloggen</a>
+                        <a href="persondata.php"  class="detail-btn"> Mijn Gegevens</a>
                     </div>
                 </div>
             </div>

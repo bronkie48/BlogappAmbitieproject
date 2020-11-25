@@ -2,6 +2,10 @@
 require_once "PHP/database.php";
 session_start();
 $userlogin = $_SESSION['userlogin'];
+if(empty($userlogin))
+{
+    header("location:/Blogapp/BlogappAmbitieproject/index.php");
+}
 ?>
 <html>
     <head>
@@ -12,12 +16,12 @@ $userlogin = $_SESSION['userlogin'];
         <header>
             <div class="header-left-block">
                 <div class="menu-container">
-                    <ul class="menu">
-                        <li class="menu-item-red"><a href="dashboard.php">Dashboard</a></li>
-                        <li class="menu-item-purple"><a href="blogoverview.php">Blogs</a></li>
-                        <li class="menu-item-green"><a href="blogform.php">Blog maken</a></li>
-                        <li class="menu-item-orange"><a href="persondata.php">Gegevens</a></li>
-                    </ul>
+                    <div class="menu">
+                        <a href="dashboard.php" class="menu-item-red">Dashboard</a>
+                        <a href="blogoverview.php" class="menu-item-purple">Blogs</a>
+                        <a href="blogform.php" class="menu-item-green">Blog maken</a>
+                        <a href="persondata.php" class="menu-item-orange">Gegevens</a>
+                    </div>
                 </div>
             </div>
             <div class="header-right-block">
@@ -27,7 +31,7 @@ $userlogin = $_SESSION['userlogin'];
                     </ul>
                     <div class="login-details-buttons">
                         <a href="/Blogapp/BlogappAmbitieproject/PHP/logout.php"  class="detail-btn"> Uitloggen</a>
-                        <input type= "button" class="detail-btn" value="Mijn gegevens">
+                        <a href="persondata.php"  class="detail-btn"> Mijn Gegevens</a>
                     </div>
                 </div>
             </div>

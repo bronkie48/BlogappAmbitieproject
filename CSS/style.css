@@ -19,6 +19,7 @@ body{
     background-color: black;
     color: #fff;
     padding: 10px;
+    text-decoration: none;
 }
 /*header*/
 header{
@@ -46,13 +47,19 @@ header{
     display: block;
 }
 .menu{
+    width: 80%;
     list-style-type: none;
     display: inline-flex;
+}
+.menu a{
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    width: 15%;
 }
 .menu-item-red{
     background-color: red;
     margin: 0 50px 0px 0;
-    width: 100px;
     border: 1px solid black;
     border-radius: 1em;
     padding: 3px 5px;
@@ -60,7 +67,6 @@ header{
 .menu-item-purple{
     background-color: purple;
     margin: 0 50px 0px 0;
-    width: 100px;
     border: 1px solid black;
     border-radius: 1em;
     padding: 3px 5px;
@@ -68,7 +74,6 @@ header{
 .menu-item-green{
     background-color: green;
     margin: 0 50px 0px 0;
-    width: 100px;
     border: 1px solid black;
     border-radius: 1em;
     padding: 3px 5px;
@@ -76,12 +81,12 @@ header{
 .menu-item-orange{
     background-color: orange;
     margin: 0;
-    width: 100px;
     border: 1px solid black;
     border-radius: 1em;
     padding: 3px 5px;
 }
 .menu-item-red a, .menu-item-purple a, .menu-item-green a, .menu-item-orange a{
+    width: 25%;
     text-decoration: none;
     color: cornsilk;
     font-family: Arial, Helvetica, sans-serif;
@@ -144,6 +149,8 @@ header{
     flex-wrap: wrap;
 }
 .metro-block-red{
+    color: #fff;
+    text-decoration: none;
     margin: 50px;
     min-width: 350px;
     min-height: 300px;
@@ -151,6 +158,8 @@ header{
     background-color: red;
 }
 .metro-block-green{
+    color: #fff;
+    text-decoration: none;
     margin: 50px;
     min-width: 350px;
     min-height: 300px;
@@ -158,6 +167,8 @@ header{
     background-color: green;
 }
 .metro-block-purple{
+    text-decoration: none;
+    color: #fff;
     margin: 50px;
     min-width: 350px;
     min-height: 300px;
@@ -165,6 +176,8 @@ header{
     background-color: purple;
 }
 .metro-block-orange{
+    text-decoration: none;
+    color: #fff;
     margin: 50px;
     min-width: 350px;
     min-height: 300px;
@@ -233,6 +246,9 @@ footer{
     position: absolute;
     top: 392px;
     left: 637px;
+}
+.metro-block-red{
+    color: #fff;
 }
 
 
