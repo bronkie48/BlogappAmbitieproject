@@ -30,7 +30,7 @@ if(isset($_POST['create_blog']))
         }
         else
         {
-            $stmt = $pdo->prepare("SELECT `userid` FROM `gebruiker` WHERE `username` = '$userlogin'");
+            $stmt = $pdo->prepare("SELECT `userid` FROM `user` WHERE `username` = '$userlogin'");
             $stmt->execute();
             $userid = $stmt->fetchColumn();
 

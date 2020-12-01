@@ -27,7 +27,7 @@ if(empty($userlogin))
             <div class="header-right-block">
                 <div class="login-details">
                 <ul class="user-login">
-                        <li><img src="../IMG/user.png" width="25" height="25" alt="user icon"><?php echo $userlogin;?></li>
+                        <li><img src="/Blogapp/BlogappAmbitieProject/IMG/user.png" width="25" height="25" alt="user icon"><?php echo $userlogin;?></li>
                     </ul>
                     <div class="login-details-buttons">
                         <a href="/Blogapp/BlogappAmbitieproject/PHP/logout.php"  class="detail-btn"> Uitloggen</a>

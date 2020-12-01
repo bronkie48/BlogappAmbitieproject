@@ -44,7 +44,7 @@ if(empty($userlogin))
             <?php
                     $stmt=$pdo->query(" SELECT blog.userid, blog.subject, blog.message, blog.image, blog.date, user.username as username
                                         FROM `blog` as blog
-                                        INNER JOIN `gebruiker` as user
+                                        INNER JOIN `user` as user
                                         ON user.userid = blog.userid
                                         WHERE username= '$userlogin' GROUP BY blog.date DESC LIMIT 1 " );
                     while($row=$stmt->fetch())

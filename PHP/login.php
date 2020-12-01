@@ -8,7 +8,7 @@
         $pwd = trim($_POST['pwd']);
         
         // check if username exists and password exist and matches
-        $stmt = $pdo->prepare("SELECT * FROM gebruiker WHERE username = ?");
+        $stmt = $pdo->prepare("SELECT * FROM user WHERE username = ?");
         $stmt->execute([$_POST['username']]); 
         $user = $stmt->fetch();
         

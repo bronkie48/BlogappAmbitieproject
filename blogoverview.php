@@ -28,7 +28,7 @@ if(empty($userlogin))
             <div class="header-right-block">
                 <div class="login-details">
                     <ul class="user-login">
-                        <li><img src="../IMG/user.png" width="25" height="25" alt="user icon"><?php echo $userlogin;?></li>
+                        <li><img src="/Blogapp/BlogappAmbitieProject/IMG/user.png" width="25" height="25" alt="user icon"><?php echo $userlogin;?></li>
                     </ul>
                     <div class="login-details-buttons">
                         <a href="PHP/logout.php"  class="detail-btn"> Uitloggen</a>
@@ -50,11 +50,7 @@ if(empty($userlogin))
                         <input type ="radio" value="oldest" id="oldest" name="oldest">
                         <label for="oldest">Oud - Nieuw</label>
                     </div>
-                    <div class="filter-radio">
-                        <input type ="radio" value="oldest" id="oldest" name="oldest">
-                        <label for="oldest">Oud - Nieuw</label>
-                    </div>
-                    <input type ="submit" value="Bevestig" id="reset">
+                    <input type ="submit" value="Bevestig" id="bevestig">
                 </form>
             </div>
 
@@ -64,14 +60,14 @@ if(empty($userlogin))
                 {
                     $stmt=$pdo->query("SELECT blog.userid, blog.subject, blog.message, blog.image, blog.date, user.username as username
                                         FROM `blog` as blog
-                                        INNER JOIN `gebruiker` as user
+                                        INNER JOIN `user` as user
                                         ON user.userid = blog.userid
                                         WHERE username= '$userlogin' GROUP BY blog.date ASC");
                 }
                 else{
                     $stmt=$pdo->query("SELECT blog.userid, blog.subject, blog.message, blog.image, blog.date, user.username as username
                                         FROM `blog` as blog
-                                        INNER JOIN `gebruiker` as user
+                                        INNER JOIN `user` as user
                                         ON user.userid = blog.userid
                                         WHERE username= '$userlogin' GROUP BY blog.date DESC");
                 }
@@ -88,7 +84,7 @@ if(empty($userlogin))
                             echo '<img src="/Blogapp/BlogappAmbitieProject/IMG/blog.jpg" alt="blog_afbeelding"/>';
                         }
                         else{
-                            echo '<img src="data:image/png;base64,'.base64_encode( $row['image'] ).'"/>';
+                            echo '<img src="data:image/jpg;base64,'.base64_encode($row['image'] ).'"/>';
                         }
                         
                         

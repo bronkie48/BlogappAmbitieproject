@@ -28,7 +28,7 @@ if(empty($userlogin))
             <div class="header-right-block">
                 <div class="login-details">
                 <ul class="user-login">
-                        <li><img src="../IMG/user.png" width="25" height="25" alt="user icon"><?php echo $userlogin;?></li>
+                        <li><img src="/Blogapp/BlogappAmbitieProject/IMG/user.png" width="25" height="25" alt="user icon"><?php echo $userlogin;?></li>
                     </ul>
                     <div class="login-details-buttons">
                         <a href="PHP/logout.php"  class="detail-btn"> Uitloggen</a>
@@ -42,7 +42,7 @@ if(empty($userlogin))
                 <?php
                 require_once "PHP/database.php";
 
-                    $sql = $pdo->prepare("SELECT * FROM `gebruiker` WHERE `username` = '$userlogin'");
+                    $sql = $pdo->prepare("SELECT * FROM `user` WHERE `username` = '$userlogin'");
                     $sql->setFetchMode(PDO::FETCH_ASSOC);
                     $sql->execute();
 

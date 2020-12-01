@@ -15,7 +15,7 @@
         $pwdcheck = $_POST['pwd-repeat'];
         
         // check for username exist
-        $stmt = $conn->prepare("SELECT * FROM gebruiker WHERE username='$username'");
+        $stmt = $conn->prepare("SELECT * FROM user WHERE username='$username'");
         $stmt->execute();
         $user=$stmt->fetch();
        
@@ -39,7 +39,7 @@
                 }
                 else
                 {
-                    $stmt = $conn->prepare("SELECT * FROM gebruiker WHERE email='$email'");
+                    $stmt = $conn->prepare("SELECT * FROM user WHERE email='$email'");
                     $stmt->execute();
                     $emailaddress=$stmt->fetch();
 
@@ -75,7 +75,7 @@
                                     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
                                     
                                     // insert user into database
-                                    $insert = $pdo->prepare("INSERT INTO `gebruiker`(`name`, `username`, `email`, `postal`, `address`, `city`, `pwd`) 
+                                    $insert = $pdo->prepare("INSERT INTO `user`(`name`, `username`, `email`, `postal`, `address`, `city`, `pwd`) 
                                                             VALUES (:name,:username,:email,:postal,:address,:city,:pwd)");
                                 
                                     $insert->bindParam(':name', $name);
