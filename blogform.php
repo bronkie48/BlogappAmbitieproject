@@ -50,9 +50,9 @@ if(empty($userlogin))
                             <input type="text" name="subject" id="subject" placeholder="Vul een onderwerp in">
                         </div>
                         <div class="form-line">
-                            <label for="image"><b>Afbeelding uploaden</b></label>
+                            <label for="image"><b>Afbeelding kiezen</b></label>
                             <input type="file" name="image" id="image">
-                            <input type="submit" value="Upload Image" name="upload_image">
+                            <!-- <input type="submit" value="Upload Image" name="upload_image"> -->
                         </div>
                         <div class="form-line">
                             <label for="message"><b>Bericht*</b></label>

@@ -34,7 +34,7 @@ if(isset($_POST['create_blog']))
             $stmt->execute();
             $userid = $stmt->fetchColumn();
 
-            $insert = $pdo->prepare("INSERT INTO blogbericht(`userid`,`subject`, `message`, `image`) 
+            $insert = $pdo->prepare("INSERT INTO `blog`(`userid`,`subject`, `message`, `image`) 
                                      VALUES(:userid, :subject, :message, :image)");
             
             $insert->bindValue(':userid', $userid);

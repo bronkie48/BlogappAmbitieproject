@@ -29,7 +29,7 @@ if(empty($userlogin))
             <div class="header-right-block">
                 <div class="login-details">
                     <ul class="user-login">
-                        <li><img src="../IMG/user.png" width="25" height="25" alt="user icon"><?php echo $userlogin;?></li>
+                        <li><img src="/Blogapp/BlogappAmbitieProject/IMG/user.png" width="25" height="25" alt="user icon"><?php echo $userlogin;?></li>
                     </ul>
                     <div class="login-details-buttons">
                         <a href="PHP/logout.php"  class="detail-btn"> Uitloggen</a>
@@ -40,12 +40,35 @@ if(empty($userlogin))
         </header>
 
         <section class="metro-style-blocks">
-            <div class="metro-style-blocks-grid">
+            <div class="metro-style-blocks-grid-dashboard">
+            <?php
+                    $stmt=$pdo->query(" SELECT blog.userid, blog.subject, blog.message, blog.image, blog.date, user.username as username
+                                        FROM `blog` as blog
+                                        INNER JOIN `gebruiker` as user
+                                        ON user.userid = blog.userid
+                                        WHERE username= '$userlogin' GROUP BY blog.date DESC LIMIT 1 " );
+                    while($row=$stmt->fetch())
+                    {
+                ?>
                 <a href="blogoverview.php" class="metro-block-red">
-                    <h1>Laatste Berichten</h1>
+                    <div class="blog-image">
+                        <h1>Laatste Bericht</h1>
+                        <h3><?php echo $row['subject']?></h3>
+                        <img src="IMG/blog.jpg" alt="blog_afbeelding">
+                        <div class="blog-message">
+                            <p><?php echo $row['message']?></p>
+                        </div>
+                        <p><?php echo date('d/m/y H:i', strtotime( $row['date']));?></p>
+                    </div>
+                </a>   
+                <?php 
+                    }
+                ?>
+                
                 </a>
                 <a href="blogform.php"class="metro-block-green"> 
                     <h1>Bericht posten</h1>
+                    <img src="IMG/blog.jpg" alt="blog_afbeelding">
                 </a> 
                 <a href="blogoverview.php" class="metro-block-purple">   
                     <h1>Mijn Berichten</h1>

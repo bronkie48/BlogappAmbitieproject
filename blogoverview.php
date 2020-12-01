@@ -41,38 +41,61 @@ if(empty($userlogin))
         <section class="metro-style-blog-overview">
             <div class="filter-blog-red">
                 <h1>Filter</h1>
-                <form action="" name="filterBlog">
+                <form action="" method="post" name="filterBlog">
                     <div class="filter-radio">
-                        <input type = "radio" value="Populair" id="populair" name="filter">
-                        <label for="Populair">Populair</label>
+                        <input type ="radio" value="newest" id="newest" name="newest">
+                        <label for="newest">Nieuw - Oud</label>
                     </div>
                     <div class="filter-radio">
-                        <input type = "radio" value="oldest" id="oldest" name="filter">
+                        <input type ="radio" value="oldest" id="oldest" name="oldest">
                         <label for="oldest">Oud - Nieuw</label>
                     </div>
                     <div class="filter-radio">
-                        <input type = "radio" value="newest" id="newest" name="filter">
-                        <label for="newest">Nieuw - Oud</label>
+                        <input type ="radio" value="oldest" id="oldest" name="oldest">
+                        <label for="oldest">Oud - Nieuw</label>
                     </div>
-                    <input type = "submit" value="Reset" id="reset">
+                    <input type ="submit" value="Bevestig" id="reset">
                 </form>
             </div>
 
             <div class="metro-style-blocks-grid">
                 <?php
+                if(isset($_POST['oldest']))
+                {
                     $stmt=$pdo->query("SELECT blog.userid, blog.subject, blog.message, blog.image, blog.date, user.username as username
-                                        FROM `blogbericht` as blog
+                                        FROM `blog` as blog
                                         INNER JOIN `gebruiker` as user
                                         ON user.userid = blog.userid
-                                        WHERE username= '$userlogin'");
+                                        WHERE username= '$userlogin' GROUP BY blog.date ASC");
+                }
+                else{
+                    $stmt=$pdo->query("SELECT blog.userid, blog.subject, blog.message, blog.image, blog.date, user.username as username
+                                        FROM `blog` as blog
+                                        INNER JOIN `gebruiker` as user
+                                        ON user.userid = blog.userid
+                                        WHERE username= '$userlogin' GROUP BY blog.date DESC");
+                }
                     while($row=$stmt->fetch())
                     {
                 ?>
                 <div class="metro-block-purple">
                     <h1><?php echo $row['subject']?></h1>
                     <div class="blog-image">
-                        <img src="IMG/blog.jpg" alt="blog_afbeelding">
-                        <p><?php echo $row['message']?></p>
+                        <!-- <img src="IMG/blog.jpg" alt="blog_afbeelding"> -->
+                        <?php 
+                        $image = $row['image'];
+                        if(!$image){
+                            echo '<img src="/Blogapp/BlogappAmbitieProject/IMG/blog.jpg" alt="blog_afbeelding"/>';
+                        }
+                        else{
+                            echo '<img src="data:image/png;base64,'.base64_encode( $row['image'] ).'"/>';
+                        }
+                        
+                        
+                        ?>
+                        <div class="blog-message">
+                            <p><?php echo $row['message']?></p>
+                        </div>
                         <p><?php echo date('d/m/y H:i', strtotime( $row['date']));?></p>
                         <input type="button" class="blog-btn" value="Lees meer">
                     </div>
