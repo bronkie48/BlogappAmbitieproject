@@ -55,7 +55,7 @@
                             </div>
                         </div> -->
                         <div class="button-right">
-                            <button type="submit" name="register_user" class="register-btn">Aanmelden</button>        
+                            <button type="submit" name="register_user" class="green-btn">Aanmelden</button>        
                         </div>
                     </form>
                 </div>
@@ -72,7 +72,7 @@
                                 <input type="password" name="pwd" id="pwd" placeholder="" >
                             </div> 
                             <div class="button-right">
-                                <button type="submit" name="login_user" class="login-btn">Inloggen</button>        
+                                <button type="submit" name="login_user" class="green-btn">Inloggen</button>        
                             </div>
                         </form>    
                     </div>
@@ -85,7 +85,7 @@
                 <p class="footer-text">
                     Made by Brian Bronkhorst 
                 </p>
-                <img src="/images/aventuslogo.jpg" alt="aventus logo">
+                <img src="IMG/aventus-logo.png" alt="aventus logo" height="100" width="100">
             </div>
         </footer>
         </body>

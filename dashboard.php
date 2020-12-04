@@ -21,7 +21,7 @@ if(empty($userlogin))
                     <div class="menu">
                         <a href="dashboard.php" class="menu-item-red">Dashboard</a>
                         <a href="blogoverview.php" class="menu-item-purple">Blogs</a>
-                        <a href="blogform.php" class="menu-item-green">Blog maken</a>
+                        <a href="blogform.php" class="menu-item-green">Post maken</a>
                         <a href="persondata.php" class="menu-item-orange">Gegevens</a>
                     </div>
                 </div>
@@ -51,14 +51,18 @@ if(empty($userlogin))
                     {
                 ?>
                 <a href="blogoverview.php" class="metro-block-red">
+                    <h1>Laatste Bericht</h1>    
                     <div class="blog-image">
-                        <h1>Laatste Bericht</h1>
-                        <h3><?php echo $row['subject']?></h3>
                         <img src="IMG/blog.jpg" alt="blog_afbeelding">
-                        <div class="blog-message">
-                            <p><?php echo $row['message']?></p>
-                        </div>
-                        <p><?php echo date('d/m/y H:i', strtotime( $row['date']));?></p>
+                    </div>
+                    <div class="blog-message">
+                        <h3>
+                        <?php 
+                            $subject = ucfirst($row['subject']); 
+                            echo $subject;
+                        ?>
+                        </h3>
+                        <p><?php echo $row['message']?></p>
                     </div>
                 </a>   
                 <?php 
@@ -67,8 +71,10 @@ if(empty($userlogin))
                 
                 </a>
                 <a href="blogform.php"class="metro-block-green"> 
-                    <h1>Bericht posten</h1>
-                    <img src="IMG/blog.jpg" alt="blog_afbeelding">
+                    <h1>Bericht Posten</h1>
+                    <div class="blog-image">
+                        <img src="IMG/blog.jpg" alt="blog_afbeelding">
+                    </div>    
                 </a> 
                 <a href="blogoverview.php" class="metro-block-purple">   
                     <h1>Mijn Berichten</h1>

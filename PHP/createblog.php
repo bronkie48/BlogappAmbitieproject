@@ -2,12 +2,6 @@
 include '../blogform.php';
 $userlogin = $_SESSION['userlogin'];
 
-if(isset($_POST['upload_image']))
-{
-    $filename = $_FILES["image_file"]["name"];
-    $tempname = $_FILES["image_file"]["tmp_name"];
-    $folder = "../IMG/".$filename;
-}
 if(isset($_POST['create_blog']))
 {
     require_once 'database.php';
@@ -23,6 +17,11 @@ if(isset($_POST['create_blog']))
     }
     else
     {
+        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") 
+        {
+            echo "Sorry, only JPG, JPEG, PNG are allowed.";
+            $uploadOk = 0;  
+        }
         // check for message (length)
         if(empty($message))
         {

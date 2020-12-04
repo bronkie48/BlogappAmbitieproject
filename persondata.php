@@ -20,14 +20,14 @@ if(empty($userlogin))
                     <div class="menu">
                         <a href="dashboard.php" class="menu-item-red">Dashboard</a>
                         <a href="blogoverview.php" class="menu-item-purple">Blogs</a>
-                        <a href="blogform.php" class="menu-item-green">Blog maken</a>
+                        <a href="blogform.php" class="menu-item-green">Post maken</a>
                         <a href="persondata.php" class="menu-item-orange">Gegevens</a>
                     </div>
                 </div>
             </div>
             <div class="header-right-block">
                 <div class="login-details">
-                <ul class="user-login">
+                    <ul class="user-login">
                         <li><img src="/Blogapp/BlogappAmbitieProject/IMG/user.png" width="25" height="25" alt="user icon"><?php echo $userlogin;?></li>
                     </ul>
                     <div class="login-details-buttons">

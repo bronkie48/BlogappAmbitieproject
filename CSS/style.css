@@ -1,9 +1,9 @@
 *{
    margin: 0;
-   font-family: 'Verdana';
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
-    background-color:  cadetblue;
+    background-color:  #4DA3EC;
     
 }
 /*general*/
@@ -11,11 +11,29 @@ body{
     text-align: center;
     margin: 44px 0 0 100px;
 }
-.register-btn{
-
+.green-btn{
+    background-color: #14C200;
+    border: 2px solid #14C200;
+    padding: 9px 10px;
+    color: #fff;
 }
-.login-btn{
-
+.reset-btn{
+    background-color: #F80101;
+    border: 1px solid #F20000;
+    padding: 10px;
+    color: #fff;
+}
+.red-btn{
+    background-color: #F80101;
+    border: 1px solid #F20000;
+    padding: 9px 10px;
+    color: #fff;
+}
+.blog-btn{
+    background-color: #FF68FF;
+    border: 5px solid #FF00F7;
+    padding: 0 18px;
+    border-radius: 2em;
 }
 .detail-btn{
     background-color: black;
@@ -26,13 +44,13 @@ body{
 /*header*/
 header{
     display: flex;
-    height: 200px;
+    height: 220px;
     width: 100%;
-    background-color: cadetblue;
+    background-color: #4DA3EC;
     overflow:hidden;
 }
 .header-left-block{
-    border: 5px solid rgb(2, 47, 133);
+    border: 10px solid #4D88EC;
     height: 190px;
     float: left;
     width: calc(100% - 300px);
@@ -41,11 +59,11 @@ header{
     width: 320px;
     float: right;
     height: 190px;
-    border: 5px solid rgb(2, 47, 133);
+    border: 10px solid #4D88EC;
     border-left: 0px;
 }
 .menu-container{
-    margin: 80px 19px 0 55px;
+    margin: 60px 19px 0 55px;
     display: block;
 }
 .menu{
@@ -58,32 +76,33 @@ header{
     text-decoration: none;
     text-align: center;
     min-width: 100px;
+    padding: 10px;
 }
 .menu-item-red{
-    background-color: red;
+    background-color: #FF5252;
     margin: 0 50px 0px 0;
-    border: 1px solid black;
+    border: 2px solid #FF686D;
     border-radius: 1em;
     padding: 3px 5px;
 }
 .menu-item-purple{
     background-color: #FF68FF;
     margin: 0 50px 0px 0;
-    border: 1px solid black;
+    border: 2px solid #FF00F7;
     border-radius: 1em;
     padding: 3px 5px;
 }
 .menu-item-green{
-    background-color: green;
+    background-color: #19FA00;
     margin: 0 50px 0px 0;
-    border: 1px solid black;
+    border: 2px solid #16DD00;
     border-radius: 1em;
     padding: 3px 5px;
 }
 .menu-item-orange{
     background-color: #FFB968;
     margin: 0;
-    border: 1px solid black;
+    border: 2px solid #FFC300;
     border-radius: 1em;
     padding: 3px 5px;
 }
@@ -108,6 +127,10 @@ header{
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
 }
+.user-login li img{
+    mix-blend-mode: multiply;
+    margin: 0 10px;
+}
 /*login-register*/
 .form-section{
     width: 100%;
@@ -116,7 +139,7 @@ header{
 .form-grid{
     border: 5px solid rgb(14, 163, 0);
     display: flex;
-    height: 300px;
+    height: 400px;
     margin: auto;
     width: 80%;
     background-color: rgb(7, 219, 0);
@@ -124,70 +147,97 @@ header{
 }
 .register-form-grid{
     background-color: rgb(7, 219, 0);
+    margin: 40px 100px;
+}
+.form-line{
+    margin: 8px 0;
+    display: inline-block;
+    width: 640px;
+}
+.form-line input{
+    width: 260px;
+    position: absolute;
+    left: 460px;
+}
+.form-line input[name=postal]{
+    width: 50px;
+}
+.form-line input[name=address]{
+    margin: 0 70px;
+    width: 190px;
 }
 .login-form-grid{
     background-color: rgb(7, 219, 0);
+    margin: 40px 0;
 }
-.login-form{
-    margin: 25px;
-}
-.register-form{
-    margin: 25px;
-}
-.button-right{
-
-}
-.button-left{
-
+.login-form-grid .form-line input{
+    left: 1130px;
+    width: 184px;
 }
 /*dashboard*/
 .metro-style-blocks-grid-dashboard{
     position: absolute;
-    left: 16%;
+    left: 8%;
     text-align: center;
     display: inline-flex;
     margin: 0 50px;
     flex-direction: row;
     flex-wrap: wrap;
 }
+.metro-style-blocks-grid-dashboard h1{
+    font-size: 2.2em;
+}
+
 .metro-style-blocks-grid{
     position: absolute;
-    left: 16%;
+    left: 14%;
     text-align: center;
     display: inline-flex;
     margin: 0 50px;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.metro-style-blocks-grid h1, .metro-style-blocks-grid p{
+    color: #000;
+    text-align: left;
+    margin: 0 50px;
+}
+.metro-style-blocks-grid h1{
+    font-size: 2.1em
+}
+
+.metro-style-blocks-grid .blog-message p{
+    margin: 30px 0;
 }
 .metro-block-red{
     color: #fff;
     text-decoration: none;
     margin: 50px;
-    min-width: 350px;
-    min-height: 300px;
-    border: 2px solid darkred;
-    background-color: red;
+    min-width: 454px;
+    min-height: 270px;
+    border: 2px #FF5252;
+    background-color:#FF5252;
 }
 .metro-block-green{
     color: #fff;
     text-decoration: none;
     margin: 50px;
-    min-width: 350px;
-    min-height: 300px;
-    border: 2px solid darkgreen;
-    background-color: green;
+    min-width: 450px;
+    min-height: 270px;
+    border: 2px solid #19FA00;
+    background-color: #19FA00;
 }
 .metro-block-purple{
     text-decoration: none;
     color: #fff;
     margin: 50px;
-    min-width: 350px;
-    min-height: 300px;
-    border: 2px solid purple;
+    min-width: 450px;
+    min-height: 270px;
+    border: 2px solid #FF68FF;
     background-color: #FF68FF;
     background-image: url(../IMG/message-icon.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     background-position: center;
 }
 .metro-style-blocks-grid .metro-block-purple{
@@ -197,13 +247,13 @@ header{
     text-decoration: none;
     color: #fff;
     margin: 50px;
-    min-width: 350px;
-    min-height: 300px;
-    border: 2px solid orange;
+    min-width: 450px;
+    max-height: 270px;
+    border: 2px solid #FFB968;
     background-color: #FFB968;
     background-image: url(../IMG/personal-icon.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     background-position: center;
 }
 /*blogoverzicht*/
@@ -212,55 +262,147 @@ header{
     flex-direction: row;
 }
 .filter-blog-red{
-    border: 2px solid darkred;
-    background-color: red;
+    border: 2px solid #FF686D;
+    background-color: #FF5252;
     margin: 51px 20px;
     width: 200px;
-    height: 250px;
+    height: 180px;
+    color: #fff;
+}
+.filter-blog-red .reset-btn{
+    margin: 10px 0px 0px 65px;
+}
+.filter-blog-red h1{
+    text-align: center;
 }
 .filter-radio{
-
+    margin: 10px 40px;
+    padding: 5px 0;
 }
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    width: 100px;
+    cursor: pointer;
+}
+  
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #FF5252;
+    border: 0.1em solid #fff;
+    border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
 .blog-image{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;	
+    float: left;
+    margin: 30px 25px 0 50px;
 }
 .blog-image img{
-    max-width: 225px;
-    max-height: 158px;
-    min-height: 158px;
+    max-width: 150px;
+    min-height: 108px;
+}
+.metro-block-green .blog-image {
+    margin: 30px 140px;
 }
 .blog-message{
     overflow: hidden;
-    max-width: 340px;
-    height: 40px;
+    max-width: 210px;
+    text-align: left;
+    height: 120px;
+    margin: 20px 0;
+}
+.blog-message h3{
+    margin: 0 0 10px 0;
+}
+.blog-date{
+    display: flex;
+}
+.blog-date .blog-btn{
+    margin-left: 16px;
 }
 /*create blog*/
-
-.create-blog{
-
-}
-
-.create-blog-form-container{
-
-}
 .create-blog-form{
-    color: #fff;
+    color: #000;
     position: relative;
     padding: 20px;
-    background: green;
+    background: #19FA00;
     margin: 25px auto;
-    max-width: 800px;
-    border: 1px solid black;
+    height: 500px;
+    max-width: 1000px;
+    border: 8px solid #16DA00;
+    border-radius: 1em;
 }
 .create-blog-button{
-    color: #fff;
+    color: #000;
     position: relative;
     padding: 20px;
     text-align: center;
-    background: green;
+    background: #19FA00;
     margin: 25px auto;
-    max-width: 800px;
-    border: 1px solid black;
+    max-width: 500px;
+    border: 2px solid #16DA00;
+}
+.create-blog-form-grid{
+    margin: 20px 100px;
+}
+.create-blog-form .form-line input{
+    left: 300;
+    width: 585px;
+}
+.create-blog-form .form-line textarea{
+    left: 300;
+    position: absolute;
+    width: 585px;
+}
+#create-blog .button-left{
+    position: absolute;
+    bottom: 10;
+}
+#create-blog .button-right{
+    position: absolute;
+    bottom: 10;
+    right: 158px;
 }
 
 /*footer*/
@@ -288,9 +430,7 @@ footer{
     top: 392px;
     left: 637px;
 }
-.metro-block-red{
-    color: #fff;
-}
+
 
 
 

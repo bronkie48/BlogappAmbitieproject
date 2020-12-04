@@ -19,7 +19,7 @@ if(empty($userlogin))
                     <div class="menu">
                         <a href="/Blogapp/BlogappAmbitieproject/dashboard.php" class="menu-item-red">Dashboard</a>
                         <a href="/Blogapp/BlogappAmbitieproject/blogoverview.php" class="menu-item-purple">Blogs</a>
-                        <a href="/Blogapp/BlogappAmbitieproject/blogform.php" class="menu-item-green">Blog maken</a>
+                        <a href="/Blogapp/BlogappAmbitieproject/blogform.php" class="menu-item-green">Post maken</a>
                         <a href="/Blogapp/BlogappAmbitieproject/persondata.php" class="menu-item-orange">Gegevens</a>
                     </div>
                 </div>
@@ -68,7 +68,7 @@ if(empty($userlogin))
                 </div>
             </div>
         </section>
-
+        
         <footer>
 
         </footer>
