@@ -34,6 +34,8 @@ body{
     border: 5px solid #FF00F7;
     padding: 0 18px;
     border-radius: 2em;
+    text-decoration: none;
+    color: #000;
 }
 .detail-btn{
     background-color: black;
@@ -147,7 +149,7 @@ header{
 }
 .register-form-grid{
     background-color: rgb(7, 219, 0);
-    margin: 40px 100px;
+    margin: 40px 95px;
 }
 .form-line{
     margin: 8px 0;
@@ -177,7 +179,7 @@ header{
 /*dashboard*/
 .metro-style-blocks-grid-dashboard{
     position: absolute;
-    left: 8%;
+    left: 11%;
     text-align: center;
     display: inline-flex;
     margin: 0 50px;
@@ -190,7 +192,7 @@ header{
 
 .metro-style-blocks-grid{
     position: absolute;
-    left: 14%;
+    left: 11%;
     text-align: center;
     display: inline-flex;
     margin: 0 50px;
@@ -395,6 +397,11 @@ header{
     position: absolute;
     width: 585px;
 }
+.create-blog-form .form-line .file_upload {
+    width: 100px;
+    height: 22px;
+    position: relative;
+}
 #create-blog .button-left{
     position: absolute;
     bottom: 10;
@@ -406,30 +413,34 @@ header{
 }
 
 /*footer*/
-footer{
-
-}
 .middle-footer{
-
+    text-align: center;
 }
-.footer-text {
-    
-}
-.footer-text p{
-
-}
-.errorRegister{
+#errorRegister{
     color: red;
+    display: block;
+}
+#errorBlog{
+    color: red;
+}
+.errorRegisterMsg{
+    color: red;
+    display: block;
+    position: absolute;
+    top: 650px;
+    left: 246px;
+    width: 210px;
+}
+#errorLogin{
+    color: red;
+}
+.errorLoginMsg{
+    color: red;
+    display: block;
     position: absolute;
     top: 470px;
-    left: 155px;
-}
-.errorLogin{
-    color: red;
-    position: absolute;
-    top: 392px;
-    left: 637px;
-}
+    right: 330px;
+
 
 
 

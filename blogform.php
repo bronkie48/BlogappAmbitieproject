@@ -11,6 +11,7 @@ if(empty($userlogin))
     <head>
         <title>Maak een Blog</title>
         <link rel="stylesheet" href="/Blogapp/BlogappAmbitieproject/CSS/style.css">
+        <script src="/Blogapp/BlogappAmbitieproject/JS/main.js"></script>
     </head>
     <body>
         <header>
@@ -44,25 +45,25 @@ if(empty($userlogin))
         <section class="create-blog-form-container">
             <div class="create-blog-form">
                 <div class="create-blog-form-grid">
-                    <form action="/Blogapp/BlogappAmbitieproject/PHP/createblog.php"method="POST" name="create-blog" id="create-blog">
+                <div id="errorBlog"></div>
+                    <form action="/Blogapp/BlogappAmbitieproject/PHP/createblog.php" method="POST" name="create-blog" id="create-blog" onsubmit="return blogValidation()">
                         <div class="form-line">
                             <label for="subject"><b>Onderwerp*</b></label>
                             <input type="text" name="subject" id="subject" placeholder="Vul een onderwerp in">
                         </div>
                         <div class="form-line">
                             <label for="image"><b>Afbeelding kiezen</b></label>
-                            <input type="file" name="image" id="image">
-                            <!-- <input type="submit" value="Upload Image" name="upload_image"> -->
+                            <input type="file" name="image" id="image"/>
                         </div>
                         <div class="form-line">
                             <label for="message"><b>Bericht*</b></label>
-                            <textarea name="message" id="message" rows= "20" cols ="100" placeholder="Vul hier uw tekst in...."></textarea>
+                            <textarea name="message" name="message" id="message" rows= "20" cols ="100" placeholder="Vul hier uw tekst in...."></textarea>
                         </div> 
                         <div class="button-left">
-                            <button type="submit" name="create_blog" class="green-btn">Posten</button> 
+                            <input type="submit" onclick="return blogValidation()" value="Posten" name="create_blog" class="green-btn"> 
                         </div>
                         <div class="button-right">
-                            <button type="reset" name="reset_blog" class="red-btn">Annuleren</button>  
+                            <input type="reset" name="reset_blog" value="Annuleren" class="red-btn">
                         </div>
                     </form>    
                 </div>
@@ -72,6 +73,6 @@ if(empty($userlogin))
         <footer>
 
         </footer>
-        </body>
+        
     </body>
 </html>

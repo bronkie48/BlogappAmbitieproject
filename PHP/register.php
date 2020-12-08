@@ -21,20 +21,20 @@
        
         if (!preg_match('/^[a-zA-Z .]+$/', $city)) 
             {
-              echo "<div class=errorRegister>Woonplaats is niet ingevuld</div>";
+              echo "<span class=errorRegisterMsg>Woonplaats is niet ingevuld</span>";
             } 
         else
         {
             if($user)
             {
-                echo "<div class=errorRegister>Gebruiker bestaat al</div>";
+                echo "<span class=errorRegisterMsg>Gebruiker bestaat al</span>";
                 exit();
             }
             else{
-                // check for email validate and exist
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+                // check for email valclassate and exist
+                if (!filter_var($email, FILTER_VALclassATE_EMAIL)) 
                 {
-                    echo "<div class=errorRegister>Voer een geldige email in</div>";
+                    echo "<span class=errorRegisterMsg>Voer een geldige email in</span>";
                     exit();
                 }
                 else
@@ -45,28 +45,28 @@
 
                     if($emailaddress)
                     {
-                        echo "<div class=errorRegister>email wordt al gebruikt</div>";
+                        echo "<span class=errorRegisterMsg>email wordt al gebruikt</span>";
                         exit();
                     }
                     else
                     {
-                        // check validation postcode
+                        // check valclassation postcode
                         if(!preg_match('/^[1-9][0-9]{3}?[A-Z]{2}$/i', $postal))
                         {
-                            echo "<div class=errorRegister>postcode is incorrect</div>";
+                            echo "<span class=errorRegisterMsg>postcode is incorrect</span>";
                             exit();
                         }
                         else
                         {
-                            if(!preg_match('/^[a-zA-Z0-9 .]+$/', $address))
+                            if(!preg_match('/^[a-zA-Z]{1,}[\s][0-9]+$/', $address))
                             {
-                                echo "<div class=errorRegister>adres is incorrect</div>";
+                                echo "<span class=errorRegisterMsg>adres is incorrect</span>";
                                 exit();
                             }
                             else{
                                 // check for equal password
                                 if($pwd != $pwdcheck){
-                                    echo "<div class=errorRegister>wachtwoorden komen niet overeen</div>";
+                                    echo "<span class=errorRegisterMsg>wachtwoorden komen niet overeen</span>";
                                     exit();
                                 }
                                 else

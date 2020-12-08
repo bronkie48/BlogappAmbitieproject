@@ -55,7 +55,7 @@ if(empty($userlogin))
                             <span class="checkmark"></span>
                         </label>
                     </div>
-                    <input type ="submit" class="reset-btn" name="confirm-filter">
+                    <input type ="submit" class="reset-btn" value="Bevestig" name="confirm-filter">
                 </form>
             </div>
 
@@ -105,11 +105,11 @@ if(empty($userlogin))
                         <?php 
                             $image = $row['image'];
                             if(!$image){
-                                echo '<img src="/Blogapp/BlogappAmbitieProject/IMG/blog.jpg" alt="blog_afbeelding"/>';
+                                echo '<img src="/Blogapp/BlogappAmbitieProject/IMG/blog.jpg" alt="blog-image"/>';
                             }
                             else{
-                                // echo '<img src="data:image/jpg;base64,'.base64_encode($row['image'] ).'"/>';
-                                echo '<img src="/Blogapp/BlogappAmbitieProject/IMG/blog.jpg" alt="blog_afbeelding"/>';
+                                // echo '<img src="data:image/jpg;base64,' . (base64_encode($row['image'])).'" alt="blog-image"/>';
+                                echo '<img src="/Blogapp/BlogappAmbitieProject/IMG/blog.jpg" alt="blog-image"/>';
                             }    
                         ?>
                     </div>

@@ -17,36 +17,47 @@ if(isset($_POST['create_blog']))
     }
     else
     {
-        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") 
+        if(!empty($image))
         {
-            echo "Sorry, only JPG, JPEG, PNG are allowed.";
-            $uploadOk = 0;  
-        }
-        // check for message (length)
-        if(empty($message))
-        {
-            echo "Er is geen bericht ingevuld";
+            $file_parts = pathinfo($image);
+
+            $file_parts['extension'];
+            $extensions = array('jpg', 'png');
+
+            if(!(in_array($file_parts['extension'], $extensions)))
+            {
+                echo "kies een afbeelding met de juiste formaat (png of jpg)";
+            }
         }
         else
         {
-            $stmt = $pdo->prepare("SELECT `userid` FROM `user` WHERE `username` = '$userlogin'");
-            $stmt->execute();
-            $userid = $stmt->fetchColumn();
+            if(empty($message))
+            {
+                echo "Er is geen bericht ingevuld";
+            }
+            
+            else
+            {
+                $stmt = $pdo->prepare("SELECT `userid` FROM `user` WHERE `username` = '$userlogin'");
+                $stmt->execute();
+                $userid = $stmt->fetchColumn();
 
-            $insert = $pdo->prepare("INSERT INTO `blog`(`userid`,`subject`, `message`, `image`) 
-                                     VALUES(:userid, :subject, :message, :image)");
-            
-            $insert->bindValue(':userid', $userid);
-            $insert->bindParam(':subject',$subject);  
-            $insert->bindParam(':message',$message); 
-            $insert->bindParam(':image',$image);  
+                $insert = $pdo->prepare("INSERT INTO `blog`(`userid`,`subject`, `message`, `image`) 
+                                        VALUES(:userid, :subject, :message, :image)");
+                
+                $insert->bindValue(':userid', $userid);
+                $insert->bindParam(':subject',$subject);   
+                $insert->bindParam(':message',$message); 
+                $insert->bindParam(':image',$image);   
 
-            $insert->execute();
+                $insert->execute();
+
+                echo "Blog is aangemaakt!";
+                // header("location:/Blogapp/BlogappAmbitieproject/blogform.php");
             
-            
-            header("location:/Blogapp/BlogappAmbitieproject/blogform.php");
-            echo $userlogin . " Blogbericht aangemaakt!";
+            }   
         }
-    } 
+    }
 }
+
 ?>

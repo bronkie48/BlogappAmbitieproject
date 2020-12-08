@@ -22,17 +22,19 @@
             include_once "../index.php";
             if(empty($username) || empty($pwd))
             {
-                echo "<div class=errorLogin>De invoervelden zijn onjuist ingevuld</div>";
+                echo "<div class=errorLoginMsg>De invoervelden zijn onjuist ingevuld</div>";
             }
-            else{
+            else
+            {
                 if (!$user)
                 {   
-                    echo "<div class=errorLogin>Gebruiker wordt niet herkend</div>";
+                    echo "<div class=errorLoginMsg>Gebruiker wordt niet herkend</div>";
                 }
                 else
                 {
-                echo "<div class=errorLogin>Gebruikersnaam en wachtwoord komen niet overeen</div>";
+                echo "<div class=errorLoginMsg>Gebruikersnaam en wachtwoord komen niet overeen</div>";
                 }
             }
+            
         }
     }
