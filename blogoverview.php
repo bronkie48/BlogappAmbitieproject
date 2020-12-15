@@ -10,8 +10,12 @@ if(empty($userlogin))
 ?>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Overzicht</title>
+        <script src="/Blogapp/BlogappAmbitieproject/JS/main.js"></script>
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="/Blogapp/BlogappAmbitieproject/CSS/modal.css">
     </head>
     <body>
         <header>
@@ -47,7 +51,6 @@ if(empty($userlogin))
                             <input type ="radio" value="newest" name="filter">
                             <span class="checkmark"></span>
                         </label>
-                        
                     </div>
                     <div class="filter-radio">
                         <label class="container">Oud - Nieuw
@@ -94,6 +97,7 @@ if(empty($userlogin))
                     {
                 ?>
                 
+
                 <div class="metro-block-purple">
                     <h1>
                         <?php  
@@ -121,19 +125,21 @@ if(empty($userlogin))
                     <div class="blog-date">
                         <p>
                             <?php echo date('d-m-y H:i', strtotime( $row['date']));?>
+                            <button class="blog-btn" data-target="simpleModal_<?php echo $row['blogid']?>" data-toggle="modal">Lees meer</button>
                         </p>
-                        <a href="#" class="blog-btn">Lees Meer</a>
+                        
                     </div>
-                </div>  
-
+                </div>
+                <div id="simpleModal_<?php echo $row['blogid']?>" class="modal">
+                    <div class="modal-content">
+                        <h3><?php echo ucfirst($row['subject'])?></h3>
+                        <p><?php echo $row['message']?></p>
+                        <button class="blog-btn" data-dismiss="modal">Sluiten</button>
+                    </div>
+                </div>
                 <?php 
                     }
                 ?>
         </section>
-
-        <footer>
-
-        </footer>
-        </body>
     </body>
 </html>

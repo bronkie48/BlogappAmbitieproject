@@ -69,10 +69,5 @@ if(empty($userlogin))
                 </div>
             </div>
         </section>
-        
-        <footer>
-
-        </footer>
-        
     </body>
 </html>

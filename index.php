@@ -85,9 +85,6 @@
                 <img src="/Blogapp/BlogappAmbitieproject/IMG/aventus-logo.png" alt="aventus logo" height="100" width="100">
             </div>
         </footer>
-          
-       
-
     </body>
 </html>
 
